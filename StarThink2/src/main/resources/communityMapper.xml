@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jongh.star.community.CommunityMapper" >
+	<select id="getAllCommunity" resultType="com.jongh.star.member.Member">
+		select*from jong_starmember
+	</select>
+	<select id="getSearchMessage" parameterType="com.jongh.star.member.Member" resultType="com.jongh.star.community.Message">
+		select*from jong_starmessage where sme_sm_id=#{sm_id}
+	</select>
+	<select id="getMessage" resultType="com.jongh.star.community.Message">
+		select*from jong_starmessage where sme_no = (select max(sme_no) from star_message)
+	</select>
+	<insert id="regMessage" parameterType="com.jongh.star.community.Message">
+		insert into jong_starmessage values(star_message_seq.nextval,#{sme_sm_id},#{sme_txt},#{sme_img},#{sme_id},#{sme_name},sysdate)
+	</insert>
+	<delete id="getDeleteMessage" parameterType="com.jongh.star.community.Message">
+		delete from jong_starmessage where sme_no=#{sme_no}
+	</delete>
+	<delete id="getAllDeleteMessage" parameterType="com.jongh.star.community.Message">
+		delete from jong_starmessage where sme_sm_id=#{sme_sm_id}
+	</delete>
+	<update id="getUpdateMessage" parameterType="com.jongh.star.member.Member">
+		update jong_starmessage set sme_img=#{sm_img} where sme_id=#{sm_id}
+	</update>
+</mapper>

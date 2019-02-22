@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jongh.star.hart.HartMapper">
+	<select id="hart" parameterType="com.jongh.star.sns.SNS" resultType="com.jongh.star.hart.Hart">
+		select * from jong_starhart where sh_st_no=#{st_no} order by sh_date desc
+	</select>
+	<select id="hartImgCheck" parameterType="com.jongh.star.sns.SNS" resultType="com.jongh.star.hart.Hart">
+		select * from jong_starhart where sh_st_no=#{st_no} and sh_id = #{st_id}
+	</select>
+</mapper>

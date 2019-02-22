@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jongh.star.file.FileMapper">
+	<insert id="regFile" parameterType="com.jongh.star.file.File">
+		insert into jong_starfile values(jong_starfile_seq.nextval,#{sf_id},#{sf_img},#{sf_title},#{sf_file},#{sf_color},sysdate)
+	</insert>
+	<select id="getAllFile" resultType="com.jongh.star.file.File">
+		select*from jong_starfile order by sf_date desc
+	</select>
+	<select id="getFile" resultType="com.jongh.star.file.File">
+		select*from jong_starfile where sf_no = (select max(sf_no) from jong_starfile)
+	</select>
+	<select id="getFileNo" resultType="com.jongh.star.file.File">
+		select*from jong_starfile where sf_no = #{sf_no}
+	</select>
+	<select id="getSearchFile" resultType="com.jongh.star.file.File">
+		select*from jong_starfile where sf_color = #{sf_color}
+	</select>
+	<delete id="deleteFile" parameterType="com.jongh.star.file.File">
+		delete from jong_starfile where sf_no = #{sf_no}
+	</delete>
+	<update id="updateFile" parameterType="com.jongh.star.file.File">
+		update jong_starfile set sf_title =#{sf_title} where sf_no = #{sf_no}
+	</update>
+	<update id="updateFileFile" parameterType="com.jongh.star.file.File">
+		update jong_starfile set sf_title =#{sf_title},sf_file=#{sf_file} where sf_no = #{sf_no}
+	</update>
+</mapper>

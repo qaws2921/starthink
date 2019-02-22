@@ -1,0 +1,314 @@
+@charset "EUC-KR";
+#homeTxtTable{
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	bottom: -124px;
+	left: 0px;
+	border-spacing: 0px;
+	transition: all 0.5s ease-out;
+	
+}
+#homeTxtarea{
+	border:  #263238 solid 2px;
+	box-shadow: 0px -5px 8px  #263238;
+	width: 100%;
+	height: 80px;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	resize: none;
+	font-size: 13pt;
+	font-weight: 900;
+}
+#homeTxtarea:focus{
+	background-color: #FFFFFFC0;
+}
+#homeFile{
+	
+	box-shadow: 0px -5px 8px  #263238;	
+	width: 100%;
+}
+#homeFile:HOVER{
+	box-shadow: 0px -5px 8px   #B71C1C;	
+	
+}
+#homeTxtButton{
+	border:  #263238 solid 2px;
+	box-shadow: 0px -5px 8px  #263238;
+	width:100%;
+	height: 100%;
+	font-size: 15pt;
+	font-weight: 900;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+#homeTxtButton:hover{
+	background-color: #26323880;
+}
+#homeTxtTd{
+	width: 80%;
+}
+#homeTxtButtonTd{
+	
+}
+
+
+#homeUpdateTable{
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	border-spacing: 0px;
+}
+#homeUpdateTxtarea{
+	border:  #B71C1C solid 2px;
+	box-shadow: 0px -5px 8px  #B71C1C;
+	width: 100%;
+	height: 80px;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	resize: none;
+	font-size: 13pt;
+	font-weight: 900;
+}
+#homeUpdateTxtarea:focus{
+	background-color: #FFFFFFC0;
+}
+#homeUpdateFile{
+	
+	box-shadow: 0px -5px 8px  #B71C1C;	
+	width: 100%;
+}
+#homeUpdateFile:HOVER{
+	box-shadow: 0px -5px 8px   #263238;	
+	
+}
+#homeUpdateButton{
+	border:  #B71C1C solid 2px;
+	box-shadow: 0px -5px 8px  #B71C1C;
+	width:100%;
+	height: 100%;
+	font-size: 15pt;
+	font-weight: 900;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+#homeUpdateButton:hover{
+	background-color: #B71C1C80;
+}
+#homeUpdateTxtTd{
+	width: 80%;
+}
+
+
+
+.homeSNSTable{
+	width: 90%;
+	border: #263238 solid 2px;
+	margin-bottom: 15px;
+	border-spacing: 0px;
+	box-shadow: 5px 5px 5px #263238;
+	
+}
+.homeSNSIdTd{
+	height: 50px;
+	width: 73%;
+	font-size: 15pt;
+	font-weight: 800;
+	padding-left: 10px;
+}
+.homeSNSImg{
+	max-width: 40px;
+	max-height: 40px;
+}
+.homeSNSButton{
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-weight: 700;
+	color:#263238; 
+	cursor: pointer;
+}
+.homeSNSButton:hover{
+	color:#26323880; 
+}
+.homeSNSHostTd{
+	width: 60%;
+	border-bottom: #263238 solid 2px;
+	padding-left: 10px;
+	font-size: 9pt;
+	font-weight: 600;
+	
+}
+.homeSNSDateTd{
+	font-size: 8pt;
+	color:#263238; 
+	font-weight: 600;
+	border-bottom: #263238 solid 2px;
+}
+.homeSNSTxtTd{
+	
+	padding-left: 15px;
+	font-weight: 600;
+	border-bottom:  #263238 solid 2px;
+	height: 70px;
+}
+.homeSNSPhoto{
+	max-width: 250px;
+	
+	margin-top: 10px;
+}
+#homePagetable{
+	width: 100%;
+	margin-bottom: 20px;
+	height: 30px;
+}
+.homePageLRTd{
+	width: 8%;
+}
+.homePageLR{
+	font-size: 20pt;
+	cursor: pointer;
+	color: #263238;
+	
+}
+.homePageLR:hover {
+	color: #26323880;
+}
+.homePageNo{
+	color: #263238;
+	text-decoration: none;
+	font-weight: 800;
+}
+.homePageNo:hover{
+	color: #26323880;
+}
+#homeSearchTd{
+	width:84%;
+	height: 100%;
+}
+#homeSearchSelect{
+	border: none;
+	outline: none;
+	color: #263238;
+	font-size:13pt;
+	background-color: transparent;
+	border-bottom:  #263238 solid 2px;
+}
+#homeSearchInput{
+	border: none;
+	outline: none;
+	color: #263238;
+	font-size:10pt;
+	background-color: transparent;
+	border-bottom:  #263238 solid 2px;
+	height: 17px;
+	
+}
+#homeSearchInput:focus {
+	border-bottom:  #B71C1C solid 2px;
+}
+#homeSearchButton{
+	border: none;
+	outline: none;
+	color: #263238;
+	font-size:10pt;
+	background-color: transparent;
+	font-weight:800;
+	height: 17px;
+	cursor: pointer;
+}
+#homeSearchButton:hover {
+	color: #26323880;
+}
+#homeCommentTd{
+	padding-left: 10px;
+	font-weight: 800;
+	height: 35px;
+}
+#homeCommentInput{
+	border: none;
+	outline: none;
+	background-color: transparent;
+	border-bottom: #263238 solid 2px; 
+	width: 58%;
+}
+#homeCommentInput:focus {
+	border-bottom:  #B71C1C solid 2px;
+}
+#homeCommentButton{
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-weight: 800;
+	color: #263238;
+	font-size: 11pt;
+	cursor: pointer;
+}
+#homeCommentButton:hover {
+	color: #26323880;
+}
+
+
+.homeSNSCommentImg{
+	max-width: 20px;
+	max-height: 20px;
+}
+#homeSNSCommentIdTd{
+	font-size: 9pt;
+	font-weight: 800;
+	color: #263238;
+	border-right: #263238 solid 0.5px;
+	width: 70px;
+}
+#homeSNSCommentTxtTd{
+	font-weight: 700;
+	color: #263238;
+	font-size: 8pt;
+	width: 100px;
+	display: inline-block;
+	word-wrap: break-word;
+	
+}
+#homeSNSCommentDateTd{
+	width: 80px;
+	font-weight: 700;
+	font-size: 9pt;
+	color: #263238;
+	
+}
+#homeSNSCommentTable{
+	
+}
+
+
+
+#homeSNSCommentButtonTd{
+	width: 96px;
+}
+.homeSNSCommentButton{
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: #263238;
+	font-weight: 800;
+	font-size: 9pt;
+	cursor: pointer;
+}
+.homeSNSCommentButton:hover {
+	color: #26323880;
+}
+#city-aqi-container{
+	cursor: pointer;	
+}
+.hartImg{
+	max-width: 30px;
+	
+}

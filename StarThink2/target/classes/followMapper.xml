@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jongh.star.follow.FollowMapper">
+	
+	<select id="following" parameterType="com.jongh.star.follow.Follow" resultType="com.jongh.star.follow.Follow">
+		select * from jong_starfollow where jsf_followingid=#{jsf_followingid}
+	</select>
+	<select id="follower" parameterType="com.jongh.star.follow.Follow" resultType="com.jongh.star.follow.Follow">
+		select * from jong_starfollow where jsf_followerid=#{jsf_followerid}
+	</select>	
+	<select id="followerCheck" parameterType="com.jongh.star.follow.Follow" resultType="com.jongh.star.follow.Follow">
+		select * from jong_starfollow where jsf_followerid=#{jsf_followerid} and jsf_followingid=#{jsf_followingid}
+	</select>
+	<delete id="followerDelete" parameterType="com.jongh.star.follow.Follow" >
+		delete from jong_starfollow where jsf_followingid=#{jsf_followingid} and jsf_followerid=#{jsf_followerid}
+	</delete>
+	<insert id="followerReg" parameterType="com.jongh.star.follow.Follow">
+		insert into jong_starfollow values(#{jsf_followingid},#{jsf_followerid},sysdate)
+	</insert>
+	
+</mapper>

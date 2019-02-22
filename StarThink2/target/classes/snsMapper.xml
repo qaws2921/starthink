@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jongh.star.sns.SNSMapper">
+	<insert id="regSNS" parameterType="com.jongh.star.sns.SNS">
+		insert into jong_startxt values(jong_startxt_seq.nextval,#{st_id},#{st_txt},#{st_img},#{st_photo},sysdate,#{st_host})		
+	</insert>
+	<select id="getShowSNS" parameterType="com.jongh.star.sns.Inquiry" resultType="com.jongh.star.sns.SNS">
+		select*
+		from(
+			select rownum as rn,st_no,st_id,st_img,st_photo,st_txt,st_date,sm_name,st_host
+			from (
+				select*
+				from JONG_STARTXT,jong_starmember 
+				where sm_id=st_id  
+				order by st_date
+				)
+			) 
+		where rn &lt;=#{x} and rn &gt;=#{y} 
+		order by rn desc		
+	</select>
+	<select id="getShowPageSNS" parameterType="com.jongh.star.sns.Inquiry" resultType="com.jongh.star.sns.SNS">
+		select*
+		from(
+			select rownum as rn,st_no,st_id,st_img,st_photo,st_txt,st_date,sm_name,st_host
+			from (
+				select*
+				from JONG_STARTXT,jong_starmember 
+				where sm_id=st_id  
+				order by st_date
+				)
+			) 
+		where rn &lt;=#{x} and rn &gt;=#{y} and st_id=#{i_st_id}
+		order by rn desc		
+	</select>
+	
+	<select id="getAllSNS" resultType="com.jongh.star.sns.SNS">
+		select*from jong_startxt,jong_starmember where sm_id =st_id order by st_date desc
+	</select>
+	<select id="getAllSNSCount" resultType="Integer">
+		select count(*) from jong_startxt,jong_starmember where sm_id =st_id
+	</select>
+	<select id="getSNSIdCount" parameterType="com.jongh.star.member.Member" resultType="Integer">
+		select count(*) from jong_startxt,jong_starmember where sm_id =st_id and st_id=#{sm_id}
+	</select>
+	<select id="getSeachSNSId" resultType="com.jongh.star.sns.SNS">
+		select*from jong_startxt,jong_starmember where sm_id =st_id and st_id like '%'||#{st_id}||'%' order by st_date 
+	</select>
+	<select id="getSeachSNSTxt" resultType="com.jongh.star.sns.SNS">
+		select*from jong_startxt,jong_starmember where sm_id =st_id and st_txt like '%'||#{st_txt}||'%' order by st_date 
+	</select>
+	<update id="updateSNS" parameterType="com.jongh.star.sns.SNS">
+		update jong_startxt set st_txt=#{st_txt} where st_no=#{st_no}
+	</update>
+	<update id="updateSNSPhoto" parameterType="com.jongh.star.sns.SNS">
+		update jong_startxt set st_txt=#{st_txt},st_photo=#{st_photo} where st_no=#{st_no}
+	</update>
+	<delete id="deleteSNS" parameterType="com.jongh.star.sns.SNS">
+		delete from jong_startxt where st_no=#{st_no}
+	</delete>
+	<select id="getSNS" parameterType="com.jongh.star.sns.SNS" resultType="com.jongh.star.sns.SNS">
+		select*from jong_startxt,jong_starmember where sm_id =st_id and st_no=#{st_no}
+	</select>
+</mapper>

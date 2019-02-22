@@ -1,0 +1,45 @@
+@charset "EUC-KR";
+#communityMainTable{
+	width: 100%;
+}
+#communityMainTd{
+  width:50%;
+}
+.communityTable{
+	
+	width: 90%;
+	border: #263238 solid 2px;
+	margin-bottom: 15px;
+	border-spacing: 0px;
+	box-shadow: 5px 5px 5px #263238;
+	font-weight: 900;
+	height: 90px;
+	font-size: 9pt;
+}
+.communityMge{
+	width: 35px;
+	cursor: pointer;
+}
+.messageX{
+	width: 15px;
+}
+.messageTable{
+	width: 90%;
+	background-color: #FFEB3B;
+	box-shadow: 5px 5px 5px #263238;
+	height: 90px;
+	font-size: 9pt;
+	border: #263238 solid 2px;
+	margin-bottom: 15px;
+	border-spacing: 0px;
+	font-weight: 900;
+}
+.messageDateTd{
+	
+	border-bottom: #263238 solid 2px;
+}
+.messageTxt{
+	width:150px;
+	display: inline-block;
+	word-wrap: break-word;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jongh.star.member.MemberMapper">
+	<insert id="regMemberJoin" parameterType="com.jongh.star.member.Member">
+		insert into jong_starmember values(#{sm_id},#{sm_pw},#{sm_name},#{sm_addr},#{sm_img})
+	</insert>
+	<select id="getMember" parameterType="com.jongh.star.member.Member" resultType="com.jongh.star.member.Member">
+		select*from jong_starmember where sm_id = #{sm_id}
+	</select>
+	<update id="updateMembership" parameterType="com.jongh.star.member.Member">
+		update jong_starmember set sm_pw =#{sm_pw},sm_name=#{sm_name} where sm_id=#{sm_id} 
+	</update>
+	<update id="updateMembershipImg" parameterType="com.jongh.star.member.Member">
+		update jong_starmember set sm_pw =#{sm_pw},sm_name=#{sm_name},sm_img=#{sm_img} where sm_id=#{sm_id} 
+	</update>
+	<delete id="deleteMembership" parameterType="com.jongh.star.member.Member">
+		delete from jong_starmember where sm_id=#{sm_id}
+	</delete>
+	
+</mapper>

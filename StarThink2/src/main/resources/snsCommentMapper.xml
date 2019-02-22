@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jongh.star.sns.SNSCommentMapper">
+	<insert id="regSNSComment" parameterType="com.jongh.star.sns.SNSComment">
+		insert into jong_starcomment values(jong_starcomment_seq.nextval,#{sc_st_no},#{sc_id},#{sc_txt},#{sc_img},#{sc_host},sysdate)	
+	</insert>
+	<select id="getAllSNSComment" parameterType="com.jongh.star.sns.SNS" resultType="com.jongh.star.sns.SNSComment">
+		select*from jong_starcomment where sc_st_no = #{st_no} order by sc_date
+	</select>
+	<delete id="deleteSNSComment" parameterType="com.jongh.star.sns.SNSComment">
+		delete from jong_starcomment where sc_no = #{sc_no}
+	</delete>
+	<update id="updateSNSComment" parameterType="com.jongh.star.sns.SNSComment">
+		update jong_starcomment set sc_txt=#{sc_txt} where sc_no=#{sc_no}
+	</update>
+</mapper>

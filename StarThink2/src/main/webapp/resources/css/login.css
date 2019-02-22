@@ -1,0 +1,36 @@
+@charset "EUC-KR";
+#loginTable{
+	width: 100%;
+	font-size: 6pt;
+	font-weight: 600;
+	color: #263238;
+	border-spacing: 0px;
+}
+.loginIdPw{
+	width: 90px;
+	border: none;
+	outline: none;
+	border-bottom: #263238 solid 2px;
+	background-color:  transparent;
+	font-weight: 800;
+}
+.loginButton{
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: #263238;
+	font-weight: 800;
+	cursor: pointer;
+}
+.loginButton:hover {
+	color: #536DFE;
+}
+#loginTd{
+	
+	
+}
+#loginJBTd{
+	width: 68px;
+
+	padding-left: -5px;
+}

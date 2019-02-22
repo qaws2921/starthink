@@ -1,0 +1,43 @@
+@charset "EUC-KR";
+#loginOKtable{
+	width: 100%;
+	
+}
+#loginOKreferenceRoomTd{
+	padding-left: 10px;
+	
+}
+#loginOKreferenceRoom{
+	font-weight: 800;
+	text-shadow: 0.5px 0.5px 0.5px black;
+	color: #263238;
+	text-decoration: none;
+	padding-right: 10px;
+	font-size: 9pt;
+	
+}
+#loginOKdownImg{
+	width: 90px;
+	height: 25px;
+}
+
+#loginOKImg{
+	max-width: 18px;
+	max-width: 18px;
+}
+#loginOKMemberTd{
+	color: #8E24AA;
+	font-weight: 800;
+}
+.loginOKButton{
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: #263238;
+	font-weight: 700;
+	font-size: 9pt;	
+	cursor: pointer;
+}
+.loginOKButton:hover {
+		color: #26323880;
+}

@@ -1,0 +1,54 @@
+@charset "EUC-KR";
+#joinTable{
+	width: 100%;
+}
+
+.joinInput{
+	width: 100%;
+	border: none;
+	outline: none;
+	border-bottom: #263238 solid 2px;
+	height: 30px;
+	color: #263238;
+	background-color: transparent;
+	font-weight: 800;
+	margin-bottom: 7px;
+	
+}
+.joinInput:focus {
+	
+	border-bottom: #F44336 solid 2px;
+}
+#joinButton{
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: #263238;
+	color: white;
+	font-size: 20pt;
+	font-weight: 800;
+	height: 50px;
+	cursor: pointer;
+}
+#joinButton:hover {
+	background-color: #26323890;
+}
+#joinImg{
+	color: #263238;
+	border-bottom: #263238 solid 3px;
+	font-weight: 900;
+}
+#joinLoginOK{
+	color: #263238;
+	font-size: 10pt;
+	font-weight: 800;
+}
+#joinAddrSeach{
+	color: #263238;
+	font-size: 10pt;
+	font-weight: 800;
+	cursor: pointer;
+}
+#joinAddrSeach:HOVER {
+	color: #F44336;
+}

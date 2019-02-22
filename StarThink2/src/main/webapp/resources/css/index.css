@@ -1,0 +1,48 @@
+@charset "EUC-KR";
+body{
+	top: 0px;
+	left: 0px;
+	background-color: #ECEFF1A0;
+}
+
+#indexMainTable{
+	width: 100%;
+	background-color: #263238;
+
+	border-spacing: 0px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+#idexMainLoginTd{
+	background-color: #ECEFF1FF;
+	height: 30px;
+	color: black;
+}
+#idexMainTitle{
+	height: 90px;
+	cursor: pointer;
+}
+#indexContentTable{
+	padding-top: 160px;
+	width: 100%;
+}
+#weatherImg{
+	width: 40px;
+	position: fixed;
+	top:118px;
+	left:10px;
+	z-index: 2;
+	background: #FFFFFF;
+}
+
+#myPage{
+	border: black solid 2px;
+	border-spacing: 0px;
+	position: fixed;
+	top: 200px;
+	right: 0px;
+	z-index: 50;
+	cursor: pointer;
+}

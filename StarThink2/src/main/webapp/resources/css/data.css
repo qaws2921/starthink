@@ -1,0 +1,187 @@
+@charset "EUC-KR";
+#dataFileTable{
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	border: #263238 solid 2px;
+	box-shadow: 0px -5px 8px  #263238;
+	z-index: 1;
+}
+#dataFileTitleInput{
+	width: 90%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-bottom: #263238 solid 2px;
+	font-weight: 800;
+	font-size: 11pt;
+}
+#dataFileTitleInput:focus {
+	background-color: #FFFFFFA0;
+	border-bottom: #DD2C00 solid 2px;
+}
+#dataFileSelect{
+	width: 70%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-weight: 800;
+	border-bottom: #263238 solid 2px;
+	font-size: 11pt;
+	height: 25px;	
+}
+#dataFileSelect:focus {
+	border-bottom: #DD2C00 solid 2px;
+}
+#dataFileInput{
+	width: 90%;
+	font-size: 11pt;
+	font-weight: 800;
+	border-bottom: #263238 solid 2px;
+	outline: none;
+}
+#dataFileInput:focus{
+	border-bottom: #DD2C00 solid 2px;
+}
+#dataFileButton{
+	color:#263238;
+	width: 70%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-weight: 900;
+	padding-right: 13px;
+	cursor: pointer;
+}
+#dataFileButton:hover {
+	color: #26323880;
+}
+.fileDownTable{
+	width:40%;
+	float:left; 
+	
+	font-size:7pt;
+	border: #263238 solid 7px;
+	margin: 12px;
+	margin-left:25px;
+	border-spacing: 0px;
+	
+	 
+}
+.fileDownIdTd{
+	background-color: #ECEFF1;
+	font-weight: 900;
+	color: #263238;
+}
+.fileDownTitleTd{
+	background-color: #263238;
+	color: #FFFFFF;
+	font-size: 10pt;
+	font-weight: 800;
+	height: 50px;
+}
+.fileDownButton{
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color:#263238;
+	font-weight: 800;
+	font-size: 7pt; 
+	cursor: pointer;
+}
+.fileDownButton:hover{
+	color:#26323880;
+}
+
+.fileDownImg{
+	width: 100px;
+	height: 60px;
+}
+.fileIdImg{
+	max-width: 18px;
+	max-width: 18px;
+}
+
+#dataFileUpdateTable{
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	border: #DD2C00 solid 2px;
+	box-shadow: 0px -5px 8px  #DD2C00;
+	z-index: 1;
+}
+#dataFileUpdateInput{
+	width: 90%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-bottom: #DD2C00 solid 2px;
+	font-weight: 800;
+	font-size: 11pt;
+}
+#dataFileUpdateInput:focus {
+	background-color: #FFFFFFA0;
+	border-bottom: #263238 solid 2px;
+}
+#dataFileUpdateSelect{
+	width: 70%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-weight: 800;
+	border-bottom: #DD2C00 solid 2px;
+	font-size: 11pt;
+	height: 25px;	
+}
+#dataFileUpdateSelect:focus {
+	border-bottom: #263238 solid 2px;
+}
+#dataFileUInput{
+	width: 90%;
+	font-size: 11pt;
+	font-weight: 800;
+	border-bottom: #DD2C00 solid 2px;
+	outline: none;
+	color: #DD2C00;
+}
+#dataFileUInput:focus{
+	border-bottom: #DD2C00 solid 2px;
+}
+#dataFileUpdateButton{
+	color:#263238;
+	width: 70%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-weight: 900;
+	padding-right: 13px;
+	cursor: pointer;
+}
+#dataFileUpdateButton:hover {
+	color: #DD2C0080;
+}
+.fileSearchPage{
+	text-decoration: none;
+	color: black;
+	font-size: 15pt;
+	font-weight: 900;
+	margin: 20px;
+}
+#fileDownMainTable{
+	width: 100%;
+	position: relative; 
+	top: -10px;
+	
+	
+	z-index: 0;
+}
+#dataSearchTable{
+	width: 100%;
+	position: relative; 
+	top: -10px;
+	
+	
+	z-index: 0;
+}
