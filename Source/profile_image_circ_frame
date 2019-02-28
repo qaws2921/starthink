@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Insert title here</title>
+	<style type="text/css">
+		body {
+			margin: 0px;
+		}
+		
+		#SiteTable {
+			width: 100%;
+			text-align: center;
+			border-spacing: 0px;
+		}
+		
+		#SiteTitleArea {
+			height: 40px;
+			background-color: silver;
+		}
+		
+		#SiteContent {
+			width: 1000px;
+			height: 1000px;
+			margin-left: auto;
+			margin-right: auto;	
+			background-color: lightgray;		
+		}
+		
+		#left {
+			width: 200px;
+		}
+		
+		#center {
+			width:500px;
+			background-color: gray;
+		}
+		
+		#right {
+			width: 300px;
+		}
+		
+		.profileDiv {
+			position: relative;
+			display: inline-block; 
+			border-radius: 50%;
+			width: 30px;
+			height: 30px;
+		}
+		
+	</style>
+</head>
+<body>
+	<table id="SiteTable">
+		<tr id="SiteTitleArea">
+			<td>
+				<div class="profileDiv" style="background: url(donkey.gif) center center no-repeat; 
+					background-size: auto 100%;"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table id="SiteContent">
+					<tr>
+						<td id="left">a</td>
+						<td id="center">b</td>
+						<td id="right">c</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+	</table>
+</body>
+</html>
