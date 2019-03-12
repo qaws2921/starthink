@@ -1,0 +1,8 @@
+function checkSpecial(str) {
+	var special_pattern = /[~!@#$%^&*()+=\;"'`?,|<>?:{}\[\]]/;
+	if (special_pattern.test(str) == true) {
+		return true;
+	} else {
+		return false;
+	}
+}
