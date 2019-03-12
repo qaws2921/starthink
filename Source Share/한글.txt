@@ -1,0 +1,10 @@
+function containsHS3(field) {
+	var str = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_" ;
+	var str2 = /[¤¡-¤¾|¤¿-¤Ó|°¡-ÆR]/;
+	for (var i = 0; i < field.value.length; i++) {
+		if (str.indexOf(field.value[i]) == -1) {
+			return true;
+		}
+	}
+	return false;
+}
