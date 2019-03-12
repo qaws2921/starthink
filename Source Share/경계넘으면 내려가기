@@ -1,0 +1,10 @@
+#homeSNSCommentTxtTd{
+	font-weight: 700;
+	color: #263238;
+	font-size: 8pt;
+	
+	width: 100px;
+	display: inline-block;
+	word-wrap: break-word;
+	
+}
