@@ -25,3 +25,7 @@ create table hitea_files(
 	hfile_video varchar2(500 char) not null,
 	constraint hitea_files_haha foreign key(hfile_no) references hitea_sns(hs_no) on delete cascade
 );
+
+create sequence hitea_sns_seq;
+create sequence hitea_files_seq;
+create sequence hitea_sns_repl_seq;
