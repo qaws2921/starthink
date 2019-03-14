@@ -12,6 +12,8 @@ create table hitea_teabag(
 	ht_count number(15) not null
 );
 
+create sequence hitea_teabag_seq;
+
 -----------------
 <03/14 12:35 >
 create table hitea_teabagmember(
@@ -20,6 +22,8 @@ create table hitea_teabagmember(
 	htm_date date not null,
 	constraint band_member_terms foreign key (htm_tno) references hitea_teabag(ht_no) on delete cascade
 );
+
+create sequence hitea_teabag_seq;
 -----------------
 
 
