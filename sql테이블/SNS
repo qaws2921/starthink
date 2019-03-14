@@ -1,6 +1,6 @@
 create table hitea_sns(
 	hs_no number(6) primary key,	
-	hs_tm_nickname varchar2(50 char) not null,
+	hs_hm_nickname varchar2(8 char) not null,
 	hs_txt varchar2(500 char) not null,	
 	hs_txt2 varchar2(500 char) not null,
 	hs_txt3 varchar2(500 char) not null,
@@ -10,10 +10,10 @@ create table hitea_sns(
 
 
 create table hitea_sns_repl(
-	hsr_no number(6) primary key,			-- 번호
-	hsr_hs_no number(6) not null,		-- 소속된 글 번호(글 테이블의 번호 - 다른 테이블의 데이터를 참조)
-	hsr_owner varchar2(200 char) not null,	-- 쓴 사람
-	hsr_txt varchar2(200 char) not null,		-- 내용
+	hsr_no number(6) primary key,		
+	hsr_hs_no number(6) not null,		
+	hsr_hm_nickname varchar2(8 char) not null,	
+	hsr_txt varchar2(200 char) not null,		
 	hsr_date date not null,
 	constraint hitea_sns_repl_haha foreign key(hsr_hs_no) references hitea_sns(hs_no) on delete cascade
 );
