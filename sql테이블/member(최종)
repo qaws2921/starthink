@@ -1,0 +1,13 @@
+create table hitea_member(
+	hm_id varchar2(20 char) primary key,
+	hm_pw varchar2(16 char) not null,
+	hm_nickname varchar2(8 char) not null,
+	hm_name varchar2(10 char) not null,
+	hm_birthday varchar2(20 char) not null,
+	hm_email varchar2(100 char) not null,
+	hm_pw_question varchar2(30 char) not null,	
+	hm_pw_answer varchar2(50 char) not null,	
+	hm_selfIntroduction varchar2(100 char) not null,
+	hm_photo_front varchar2(100 char) not null,
+	hm_photo_back varchar2(100 char) not null
+);
