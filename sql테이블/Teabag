@@ -12,7 +12,16 @@ create table hitea_teabag(
 	ht_count number(15) not null
 );
 
-
 -----------------
+<03/14 12:29 수정>
+create table hitea_teabagmember(
+	htm_id varchar2(10char) not null,
+	htm_tno number(10) not null,
+	htm_date date not null,
+	constraint band_member_terms foreign key (htm_tno) references hitea_teabag(ht_no) on delete cascade
+);
+-----------------
+
+
 
 나머지는 프로젝트 진행하면서 
