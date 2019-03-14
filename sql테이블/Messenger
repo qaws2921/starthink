@@ -1,0 +1,7 @@
+create table hitea_messenger_list(
+  hmsl_no number(10) primary key, 
+  hmsl_m1 varchar2(20 char) not null, 
+  hmsl_m2 varcahr2(20 char) not null,
+  hmsl_last_txt varchar2(300 char) not null, 
+  hmsl_last_date date
+);
