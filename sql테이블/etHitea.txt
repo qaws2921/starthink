@@ -1,0 +1,53 @@
+﻿////////////////////////////////////////
+팔로우
+
+create table hitea_follow(
+	hf_following_hm_id varchar2(20 char) not null,
+	hf_follower_id varchar2(20 char) not null,
+	hf_date date not null
+)
+
+
+///////////////////////////////////////////////
+좋아요
+sns 테이블 만들고 실행
+
+create table hitea_heart(
+	hh_hs_no number(10) not null,
+	hh_heart_hm_id varchar2(20 char) not null,
+	hh_date date not null,
+	constraint sns_heart foreign key(hh_hs_no) references hitea_sns(hs_no) on delete cascade
+)
+
+////////////////////////////////////////////////
+해시
+sns 테이블 만들고 실행
+
+create table hitea_hash(
+	hhash_hs_no number(10) not null,
+	hhash_text varchar2(50 char) not null,
+	constraint sns_hash foreign key(hhash_hs_no) references hitea_sns(hs_no) on delete cascade
+)
+
+////////////////////////////////////////////////////////
+알람
+
+create table hitea_alarm(
+	halarm_to_id varchar2(20 char) not null,
+	halarm_from_id varchar2(20 char) not null,
+	halarm_txt varchar2(20 char) not null,
+	halarm_date Date not null
+)
+
+///////////////////////////////////////////////////
+신고
+
+create table hitea_report(
+	hr_no number(10) primary key,
+	hr_this varchar2(20 char) not null,
+	hr_report_id varchar2(20 char) not null,
+	hr_text varchar2(300 char) not null,
+	hr_catego varchar2(10 char) not null,
+	hr_date Date not null
+)
+create sequence hitea_report_seq
