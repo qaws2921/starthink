@@ -13,7 +13,7 @@ create table hitea_teabag(
 );
 
 -----------------
-<03/14 12:35 수정>
+<03/14 12:35 >
 create table hitea_teabagmember(
 	htm_id varchar2(10char) not null,
 	htm_tno number(10) not null,
