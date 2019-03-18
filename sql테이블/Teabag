@@ -25,7 +25,18 @@ create table hitea_teabagmember(
 
 create sequence hitea_teabag_seq;
 -----------------
+<03/18 16:11 >
+create table hitea_bbs(
+	hb_no number(15) not null,
+	hb_id varchar2(10 char) not null,
+	hb_content varchar2(200 char) not null,
+	hb_date date not null,
+	hb_tno number(15) not null,
+	constraint hitea_bbs_term 
+	foreign key(hb_tno) references hitea_teabag(ht_no)
+	on delete cascade
+);
 
-
+create sequence hitea_bbs_seq;
 
 나머지는 프로젝트 진행하면서 
