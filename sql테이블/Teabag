@@ -38,5 +38,22 @@ create table hitea_bbs(
 );
 
 create sequence hitea_bbs_seq;
+-----------------
+<03/20 15:22>
+create table hitea_dataroom(
+	hd_no number(15) primary key,
+	hd_id varchar2(20char) not null,
+	hd_title varchar2(20char) not null,
+	hd_fname varchar2(200char) not null,
+	hd_tno number(4) not null,
+	hd_ftype varchar2(3char) not null,
+	hd_date varchar2(200char) not null,
+	constraint hitea_dataroom_term 
+	foreign key(hd_tno) references hitea_teabag(ht_no)
+	on delete cascade
+);
+
+create sequence hitea_dataroom_seq;
+-----------------
 
 나머지는 프로젝트 진행하면서 
