@@ -83,5 +83,19 @@ create table hitea_joinreq(
 
 create sequence hitea_joinreq_seq;
 -----------------
+<03/21 12:09>
+create table hitea_pagenotice(
+	hpn_no number(15) primary key,
+	hpn_id varchar2(20char) not null,
+	hpn_tno number(10) not null,
+	hpn_content varchar2(100char) not null,
+	hpn_type varchar2(10char) not null,
+	hpn_date varchar2(20char) not null,
+	constraint hitea_pagenotice_term 
+	foreign key(hpn_tno) references hitea_teabag(ht_no)
+	on delete cascade
+);
+
+create sequence hitea_pagenotice_seq;
 
 나머지는 프로젝트 진행하면서 
