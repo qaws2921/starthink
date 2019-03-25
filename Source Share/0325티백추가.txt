@@ -1,0 +1,39 @@
+Controller
+
+-----
+
+	@RequestMapping(value = "/site.teabag.getTeabagByName", method = RequestMethod.GET,
+			produces="application/json; charset=utf-8")
+	public @ResponseBody Teabags getTeabagByName(Teabag t, HttpServletRequest req, HttpServletResponse res) {
+		return tDAO.getTeabagByName(t, req);
+	}
+
+
+--------------------
+
+DAO
+
+-----
+
+	public Teabags getTeabagByName(Teabag t, HttpServletRequest req){
+		return new Teabags(ss.getMapper(TeabagMapper.class).getTeabagByName(t));
+	}
+
+--------------------
+
+teabagMapper
+
+-----
+
+	<select id="getTeabagByName" parameterType="com.ht.hitea.teabag.tb.Teabag" resultType="com.ht.hitea.teabag.tb.Teabag">
+		select * from hitea_teabag where ht_name like '%'|| #{ht_name} || '%'
+	</select>
+
+--------------------
+
+TeabagMapper.java
+
+-----
+
+	public abstract List<Teabag> getTeabagByName(Teabag t);
+
