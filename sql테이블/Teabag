@@ -7,14 +7,13 @@ create table hitea_teabag(
 	ht_profilepic varchar2(200char) not null,
 	ht_bgpic varchar2(200char) not null,
 	ht_introduce varchar2(100char) not null,
-	ht_minage number(8) not null,
-	ht_maxage number(8) not null,
 	ht_count number(15) not null,
 	ht_notice varchar2(200char) not null
 );
 
 create sequence hitea_teabag_seq;
 <<<<<<<<<<<<<<<<<< 공지 추가. >>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< 나이대 . >>>>>>>>>>>>>>>
 -----------------
 <03/14 12:35 >
 create table hitea_teabagmember(
