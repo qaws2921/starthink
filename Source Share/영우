@@ -1,0 +1,3 @@
+<input type="hidden" id="tb_no1" value="${sessionScope.teabag.ht_no}">
+<input type="hidden" id="ht_name" value="${sessionScope.teabag.ht_name }">
+<input type="hidden" id="login_sm_id" value="${sessionScope.loginMember.hm_id }">
