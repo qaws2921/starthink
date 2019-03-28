@@ -13,7 +13,7 @@ create table hitea_teabag(
 
 create sequence hitea_teabag_seq;
 <<<<<<<<<<<<<<<<<< 공지 추가. >>>>>>>>>>>>>>>
-<<<<<<<<<<<<<<<<<< 나이대 . >>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< 나이대 삭제. >>>>>>>>>>>>>>>
 -----------------
 <03/14 12:35 >
 create table hitea_teabagmember(
