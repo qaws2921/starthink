@@ -1,0 +1,8 @@
+select * from hitea_pagenotice 
+where (hpn_id='koko2921' and hpn_type = '솔로')
+or (hpn_type = '전체' and hpn_tno in 
+(select ht_no from hitea_teabag 
+where ht_no in 
+(select htm_tno from hitea_teabagmember 
+where htm_id = 'koko2921' 
+)))
