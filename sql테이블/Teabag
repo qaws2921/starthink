@@ -1,3 +1,11 @@
+drop table hitea_teabag cascade constraint purge;
+drop table hitea_teabagmember cascade constraint purge;
+drop table hitea_bbs cascade constraint purge;
+drop table hitea_dataroom cascade constraint purge;
+drop table hitea_calendar cascade constraint purge;
+drop table hitea_joinreq cascade constraint purge;
+drop table hitea_pagenotice cascade constraint purge;
+
 create table hitea_teabag(
 	ht_no number(10) primary key,
 	ht_name varchar2(15char) not null,
@@ -12,8 +20,7 @@ create table hitea_teabag(
 );
 
 create sequence hitea_teabag_seq;
-<<<<<<<<<<<<<<<<<< 공지 추가. >>>>>>>>>>>>>>>
-<<<<<<<<<<<<<<<<<< 나이대 삭제. >>>>>>>>>>>>>>>
+
 -----------------
 <03/14 12:35 >
 create table hitea_teabagmember(
@@ -47,7 +54,7 @@ create table hitea_dataroom(
 	hd_fname varchar2(200char) not null,
 	hd_tno number(4) not null,
 	hd_ftype varchar2(3char) not null,
-	hd_date varchar2(200char) not null,
+	hd_date date not null,
 	constraint hitea_dataroom_term 
 	foreign key(hd_tno) references hitea_teabag(ht_no)
 	on delete cascade
@@ -75,7 +82,7 @@ create table hitea_joinreq(
 	hj_no number(15) primary key,
 	hj_id varchar2(20 char) not null,
 	hj_tno number(10) not null,
-	hj_date varchar2(20char) not null,
+	hj_date date not null,
 	constraint hitea_joinreq_term 
 	foreign key(hj_tno) references hitea_teabag(ht_no)
 	on delete cascade
@@ -90,7 +97,7 @@ create table hitea_pagenotice(
 	hpn_tno number(10) not null,
 	hpn_content varchar2(100char) not null,
 	hpn_type varchar2(10char) not null,
-	hpn_date varchar2(20char) not null,
+	hpn_date date not null,
 	constraint hitea_pagenotice_term 
 	foreign key(hpn_tno) references hitea_teabag(ht_no)
 	on delete cascade
