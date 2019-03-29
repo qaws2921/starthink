@@ -1,0 +1,2 @@
+update hitea_sns set hs_photo_front = #{hs_photo_front} where hs_hm_id = #{hm_id} 
+update hitea_sns_repl set hsr_img = #{hs_photo_front} where hsr_hm_nickname = #{hm_nickname} 
