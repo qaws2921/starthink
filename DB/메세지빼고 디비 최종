@@ -7,12 +7,12 @@ create table hitea_member(
 	hm_pw_question varchar2(30 char) not null,	
 	hm_pw_answer varchar2(50 char) not null,	
 	hm_selfIntroduction varchar2(100 char) not null,
-	hm_photo_front varchar2(100 char) not null,
-	hm_photo_back varchar2(100 char) not null
+	hm_photo_front varchar2(200 char) not null,
+	hm_photo_back varchar2(200 char) not null
 );
 
 create table hitea_sns(
-	hs_no number(6) primary key,	
+	hs_no number(15) primary key,	
 	hs_hm_id varchar2(20 char) not null,
 	hs_hm_nickname varchar2(8 char) not null,
 	hs_txt varchar2(500 char) not null,	
@@ -23,8 +23,8 @@ create table hitea_sns(
 );
 
 create table hitea_sns_repl(
-	hsr_no number(6) primary key,		
-	hsr_hs_no number(6) not null,		
+	hsr_no number(15) primary key,		
+	hsr_hs_no number(15) not null,		
 	hsr_hm_nickname varchar2(8 char) not null,	
 	hsr_txt varchar2(200 char) not null,		
 	hsr_date date not null,
@@ -33,7 +33,7 @@ create table hitea_sns_repl(
 );
 
 create table hitea_files(
-	hfile_no number(6) not null,
+	hfile_no number(15) not null,
 	hfile_img varchar2(500 char) not null,
 	hfile_video varchar2(500 char) not null,
 	constraint hitea_files_haha foreign key(hfile_no) references hitea_sns(hs_no) on delete cascade
@@ -49,21 +49,21 @@ create table hitea_follow(
 );
 
 create table hitea_heart(
-	hh_hs_no number(10) not null,
+	hh_hs_no number(15) not null,
 	hh_heart_hm_id varchar2(20 char) not null,
 	hh_date date not null,
 	constraint sns_heart3 foreign key(hh_hs_no) references hitea_sns(hs_no) on delete cascade
 );
 
 create table hitea_hash(
-	hhash_hs_no number(10) not null,
+	hhash_hs_no number(20) not null,
 	hhash_text varchar2(50 char) not null,
 	constraint sns_hash foreign key(hhash_hs_no) references hitea_sns(hs_no) on delete cascade
 );
 
 create table hitea_alarm(
 	halarm_no number(7) primary key,
-	halarm_to_nickname varchar2(20 char) not null,
+	halarm_to_nickname varchar2(8 char) not null,
 	halarm_to_id varchar2(20 char) not null,
 	halarm_from_id varchar2(20 char) not null,
 	halarm_txt varchar2(20 char) not null,
@@ -95,7 +95,7 @@ create table hitea_teabag(
 	ht_name varchar2(15char) not null,
 	ht_category varchar2(15char) not null,
 	ht_date date not null,
-	ht_leaderid varchar2(10char) not null,
+	ht_leaderid varchar2(20char) not null,
 	ht_profilepic varchar2(200char) not null,
 	ht_bgpic varchar2(200char) not null,
 	ht_introduce varchar2(100char) not null,
@@ -108,7 +108,7 @@ create sequence hitea_teabag_seq;
 -----------------
 <03/14 12:35 >
 create table hitea_teabagmember(
-	htm_id varchar2(10char) not null,
+	htm_id varchar2(20char) not null,
 	htm_tno number(10) not null,
 	htm_date date not null,
 	constraint band_member_terms foreign key (htm_tno) references hitea_teabag(ht_no) on delete cascade
@@ -119,10 +119,10 @@ create sequence hitea_teabag_seq;
 <03/18 16:11 >
 create table hitea_bbs(
 	hb_no number(15) not null,
-	hb_id varchar2(10 char) not null,
+	hb_id varchar2(30 char) not null,
 	hb_content varchar2(200 char) not null,
 	hb_date date not null,
-	hb_tno number(15) not null,
+	hb_tno number(10) not null,
 	constraint hitea_bbs_term 
 	foreign key(hb_tno) references hitea_teabag(ht_no)
 	on delete cascade
@@ -136,7 +136,7 @@ create table hitea_dataroom(
 	hd_id varchar2(20char) not null,
 	hd_title varchar2(20char) not null,
 	hd_fname varchar2(200char) not null,
-	hd_tno number(4) not null,
+	hd_tno number(10) not null,
 	hd_ftype varchar2(3char) not null,
 	hd_date date not null,
 	constraint hitea_dataroom_term 
@@ -149,7 +149,7 @@ create sequence hitea_dataroom_seq;
 <03/21 09:57>
 create table hitea_calendar(
 	hc_no number(15) primary key,
-	hc_tno number(4) not null,
+	hc_tno number(10) not null,
 	hc_category varchar2(10char) not null, 
 	hc_title varchar2(20char) not null,
 	hc_content varchar2(200char) not null,
