@@ -1,9 +1,23 @@
-// 메신저, 채팅 목록
+-- Messenger
+-- 1) Message (→ Mongo DB)
+-- hitea_msg (
+--  no number, 
+--  sendTo string, 
+--  sendFrom string, 
+--  txt string, 
+--  date date,
+--  sfDel boolean, 
+--  stDel boolean, 
+--  stCheck boolean
+-- );
+
+-- 2) Messenger List (→ Oracle DB)
 create table hitea_messenger_list(
   hmsl_no number(10) primary key, 
   hmsl_m1 varchar2(20 char) not null, 
   hmsl_m2 varcahr2(20 char) not null,
-  hmsl_last_txt varchar2(300 char) not null, 
+  hmsl_last_txt1 varchar2(300 char) not null, 
+  hmsl_last_txt2 varchar2(300 char) not null, 
   hmsl_last_date date not null
 );
 
