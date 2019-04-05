@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+#snsfileInput {filter:alpha(opacity:0); opacity:0; width:60px; height:20px; }
+.yw_file_wrap {display:inline-block; width:60px; height:20px;
+ 		background-image: url(../../img/teabag/file.jpg); 
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		border: #D5D5D5 solid 1px;
+	
+		position: absolute; top:0; right:0;
+}
+
+.yw_wrap {width:200px; position:relative;} 
+
+.yw_file_route {float:left; width:130px; height:16px; background-color:#f6f6f6; border:1px solid #eee; color:#777; }
