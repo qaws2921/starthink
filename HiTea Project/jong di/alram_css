@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+.etAlramDiv{
+	
+	font-weight: 900;
+	margin-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	width: 220px;
+	font-size: 8pt;
+	border-bottom: #274554 solid 2px;
+	transition: all ease 0.5s 0s;
+}
+
+#etAlramList{
+	font-size: 14pt;
+	font-weight: 900;
+	border-bottom: black solid 2px;
+	height: 30px;
+	padding-left: 15px;
+}
+
+#checkBox{
+	color: #274554;
+}
+
+
+.etAlramDiv:HOVER {
+	
+ 	background-color: #274554;
+ 	color: white;
+}
+
+.etAlramSpan{
+	
+	cursor: pointer;
+	color: #FAC03B;
+}
