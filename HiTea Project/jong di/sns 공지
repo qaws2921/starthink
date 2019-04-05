@@ -1,0 +1,37 @@
+			<!-- site right side area -->
+			<td class="SiteContentTd3">
+				<table id="checkBox">
+					<tr>
+						<td id="etAlramList">
+							Recent Notie
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							<c:forEach var="alram" items="${alramAll }">
+								
+								<c:choose>
+									<c:when test="${alram.halarm_txt == '새글' }">
+										<div align="left" class="etAlramDiv"><span class="etAlramSpan">${alram.halarm_to_nickname }</span>님이 글을 등록 했습니다.
+										<input type="hidden" value="${alram.halarm_to_nickname }" class="etNicknameInput">
+										</div>
+									</c:when>
+									<c:when test="${alram.halarm_txt == '좋아요' }">
+										<div align="left" class="etAlramDiv"><span class="etAlramSpan">${alram.halarm_to_nickname }</span>님이 내 글을 좋아합니다.
+										<input type="hidden" value="${alram.halarm_to_nickname }" class="etNicknameInput">
+										</div>
+									</c:when>
+									<c:when test="${alram.halarm_txt == '팔로우' }">
+										<div align="left" class="etAlramDiv"><span class="etAlramSpan">${alram.halarm_to_nickname }</span>님이 팔로우합니다.
+										<input type="hidden" value="${alram.halarm_to_nickname }" class="etNicknameInput">
+										</div>
+									</c:when>
+								</c:choose>
+								
+							</c:forEach>						
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
