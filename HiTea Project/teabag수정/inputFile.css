@@ -1,16 +1,57 @@
 @CHARSET "UTF-8";
 #snsfileInput {filter:alpha(opacity:0); opacity:0; width:60px; height:20px; }
-#tb_dr_file_input {filter:alpha(opacity:0); opacity:0; width:60px; height:20px; }
+#tb_dr_file_input {filter:alpha(opacity:0); opacity:0; width:60px; height:20px; position: relative;}
 .yw_file_wrap {display:inline-block; width:60px; height:20px;
  		background-image: url(../../img/teabag/file.jpg); 
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		border: #D5D5D5 solid 1px;
-	
 		position: absolute; top:0; right:0;
+		transition: background-image 0.8s;
 }
 
 .yw_wrap {width:200px; position:relative;} 
 
 .yw_file_route {float:left; width:130px; height:16px; background-color:#f6f6f6; border:1px solid #eee; color:#777; }
+
+.yw_file_wrap:HOVER{
+	 background-image: url(../../img/teabag/dd.jpg); 
+	 cursor: pointer;
+}
+
+
+
+
+
+.filebox label {
+  display: inline-block;
+  padding: .5em .75em;
+  color: #fff;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #5cb85c;
+  cursor: pointer;
+  border: 1px solid #4cae4c;
+  border-radius: .25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.filebox label:hover {
+  background-color: #6ed36e;
+}
+
+.filebox label:active {
+  background-color: #367c36;
+}
+
+.filebox input[type="file"] {
+  position: absolute;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
