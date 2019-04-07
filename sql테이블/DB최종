@@ -206,13 +206,16 @@ create sequence hitea_pagenotice_seq;
 create table hitea_messenger_list(
   hmsl_no number(10) primary key, 
   hmsl_m1 varchar2(20 char) not null, 
-  hmsl_m2 varcahr2(20 char) not null,
+  hmsl_m2 varchar2(20 char) not null,
   hmsl_last_txt1 varchar2(300 char) not null, 
   hmsl_last_txt2 varchar2(300 char) not null, 
   hmsl_last_date date not null
 );
 
-create sequece hitea_messenger_list_seq
+
+create sequence hitea_messenger_list_seq;
+
+
 
 
 // 참고
