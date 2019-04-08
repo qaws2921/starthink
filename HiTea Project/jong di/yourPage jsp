@@ -1,0 +1,5 @@
+가장 밑에
+  
+  <div class="memberReportDiv">
+		<img src="resources/img/sns/plus.png" class="memberReportImg" onclick="reportClick('${dm.hm_id}','${sessionScope.loginMember.hm_id}','사람')">
+	</div>	
