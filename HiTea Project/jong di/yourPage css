@@ -1,0 +1,13 @@
+가장 밑에
+
+.memberReportImg{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.memberReportDiv{
+	position: absolute;
+	top: 257px;
+	left: auto;
+	margin-left: 940px;
+}
