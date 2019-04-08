@@ -56,7 +56,7 @@ create table hitea_heart(
 );
 
 create table hitea_hash(
-	hhash_hs_no number(20) not null,
+	hhash_hs_no number(15) not null,
 	hhash_text varchar2(50 char) not null,
 	constraint sns_hash foreign key(hhash_hs_no) references hitea_sns(hs_no) on delete cascade
 );
