@@ -106,7 +106,7 @@ create table hitea_teabag(
 create sequence hitea_teabag_seq;
 
 -----------------
-<03/14 12:35 >
+
 create table hitea_teabagmember(
 	htm_id varchar2(20char) not null,
 	htm_tno number(10) not null,
@@ -116,7 +116,7 @@ create table hitea_teabagmember(
 
 create sequence hitea_teabag_seq;
 -----------------
-<03/18 16:11 >
+
 create table hitea_bbs(
 	hb_no number(15) not null,
 	hb_id varchar2(30 char) not null,
@@ -130,7 +130,7 @@ create table hitea_bbs(
 
 create sequence hitea_bbs_seq;
 -----------------
-<03/20 15:22>
+
 create table hitea_dataroom(
 	hd_no number(15) primary key,
 	hd_id varchar2(20char) not null,
@@ -146,7 +146,7 @@ create table hitea_dataroom(
 
 create sequence hitea_dataroom_seq;
 -----------------
-<03/21 09:57>
+
 create table hitea_calendar(
 	hc_no number(15) primary key,
 	hc_tno number(10) not null,
@@ -174,7 +174,7 @@ create table hitea_joinreq(
 
 create sequence hitea_joinreq_seq;
 -----------------
-<03/21 12:09>
+
 create table hitea_pagenotice(
 	hpn_no number(15) primary key,
 	hpn_id varchar2(20char) not null,
@@ -189,18 +189,6 @@ create table hitea_pagenotice(
 
 create sequence hitea_pagenotice_seq;
 
--- Messenger
--- 1) Message (→ Mongo DB)
--- hitea_msg (
---  no number, 
---  sendTo string, 
---  sendFrom string, 
---  txt string, 
---  date date,
---  sfDel boolean, 
---  stDel boolean, 
---  stCheck boolean
--- );
 
 -- 2) Messenger List (→ Oracle DB)
 create table hitea_messenger_list(
@@ -214,6 +202,22 @@ create table hitea_messenger_list(
 
 
 create sequence hitea_messenger_list_seq;
+
+
+-- Messenger
+-- 1) Message (→ Mongo DB)
+-- hitea_msg (
+--  no number, 
+--  sendTo string, 
+--  sendFrom string, 
+--  txt string, 
+--  date date,
+--  sfDel boolean, 
+--  stDel boolean, 
+--  stCheck boolean
+-- );
+
+
 
 
 
