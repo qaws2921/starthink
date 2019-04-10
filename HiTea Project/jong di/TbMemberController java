@@ -1,0 +1,119 @@
+package com.ht.hitea.teabag.tb.member;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.ht.hitea.member.MemberDAO;
+import com.ht.hitea.teabag.tb.TeabagDAO;
+import com.ht.hitea.teabag.tb.TeabagMembers;
+
+@Controller
+public class TbMemberController {
+	
+	@Autowired
+	private MemberDAO mDAO;
+	
+	@Autowired
+	private TbMemberDAO tmDAO;
+	
+	@Autowired
+	private TeabagDAO tDAO;
+	
+	@RequestMapping(value = "/teabag.member.go", method = RequestMethod.GET)
+	public String goBBSTeabag(HttpServletRequest req, HttpServletResponse res) {
+		if (mDAO.loginCheck(req, res)) {
+			req.setAttribute("teabagContentPage", "member/teabagMember.jsp");
+			req.setAttribute("contentPage", "teabag/teabag.jsp");
+			return "index";
+		} else {
+			return "home";
+		}
+	}
+	
+	@RequestMapping(value = "/teabag.member.getAllMember", method = RequestMethod.GET,
+			produces="application/json; charset=utf-8")
+	public @ResponseBody TeabagMembers getAllMemberByTNo(HttpServletRequest req, HttpServletResponse res) {
+		return tmDAO.getAllMemberByTNo(req, res);
+	}
+	
+	@RequestMapping(value = "/site.member.sendjoinReq", method = RequestMethod.GET)
+	public String joinReq(HttpServletRequest req, HttpServletResponse res) {
+		if (mDAO.loginCheck(req, res)) {
+			tmDAO.sendJoinReq(req, res);
+			req.setAttribute("contentPage", "teabag/allTeabag.jsp");
+			return "index";
+		} else {
+			return "home";
+		}
+	}
+	
+	@RequestMapping(value = "/teabag.member.getJoinReq", method = RequestMethod.GET,
+			produces="application/json; charset=utf-8")
+	public @ResponseBody JoinReqs getJoinReqByTNo(HttpServletRequest req, HttpServletResponse res) {
+		return tmDAO.getJoinReqByTNo(req, res);
+	}
+	
+	@RequestMapping(value = "/teabag.member.acceptJoinReq", method = RequestMethod.GET)
+	public String acceptJoinReq(HttpServletRequest req, HttpServletResponse res) {
+		if (mDAO.loginCheck(req, res)) {
+			tmDAO.acceptJoinReq(req, res);
+			req.setAttribute("teabagContentPage", "member/teabagMember.jsp");
+			req.setAttribute("contentPage", "teabag/teabag.jsp");
+			return "index";
+		} else {
+			return "home";
+		}
+	}
+
+	@RequestMapping(value = "/teabag.member.denyJoinReq", method = RequestMethod.GET)
+	public String denyJoinReq(HttpServletRequest req, HttpServletResponse res) {
+		if (mDAO.loginCheck(req, res)) {
+			tmDAO.denyJoinReq(req, res);
+			req.setAttribute("teabagContentPage", "member/teabagMember.jsp");
+			req.setAttribute("contentPage", "teabag/teabag.jsp");
+			return "index";
+		} else {
+			return "home";
+		}
+	}
+	
+	@RequestMapping(value = "/teabag.member.forceDeleteMember", method = RequestMethod.GET)
+	public String forceDeleteMember(HttpServletRequest req, HttpServletResponse res) {
+		if (mDAO.loginCheck(req, res)) {
+			tmDAO.forceDeleteMember(req, res);
+			tDAO.firstGoTeabag(req, res);
+			req.setAttribute("teabagContentPage", "member/teabagMember.jsp");
+			req.setAttribute("contentPage", "teabag/teabag.jsp");
+			return "index";
+		} else {
+			return "home";
+		}
+	}
+
+	@RequestMapping(value = "/teabag.member.delegateMember", method = RequestMethod.GET)
+	public String delegateMember(HttpServletRequest req, HttpServletResponse res) {
+		if (mDAO.loginCheck(req, res)) {
+			tmDAO.delegateMember(req, res);
+			tDAO.firstGoTeabag(req, res);
+			req.setAttribute("teabagContentPage", "member/teabagMember.jsp");
+			req.setAttribute("contentPage", "teabag/teabag.jsp");
+			return "index";
+		} else {
+			return "home";
+		}
+	}
+
+	
+	@RequestMapping(value = "/teabag.member.getPageNoticeById", method = RequestMethod.GET,
+			produces="application/json; charset=utf-8")
+	public @ResponseBody PageNotices getPageNoticeById(HttpServletRequest req, HttpServletResponse res) {
+		return tmDAO.getPageNoticeById(req);
+	}
+
+}
