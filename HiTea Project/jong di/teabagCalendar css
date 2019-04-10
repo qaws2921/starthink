@@ -1,0 +1,85 @@
+@CHARSET "UTF-8";
+#calendarMini {
+    margin-top:30px;
+    width: 180px;
+    font-size: 10px;
+	margin-left: 10px;
+    z-index: 0;
+    padding-bottom: 10px;
+}
+.calendarMiniTd .fc-toolbar {
+    font-size: .9em;
+}
+.calendarMiniTd .fc-toolbar h2 {
+    font-size: 12px;
+    white-space: normal !important;
+}
+/* click +2 more for popup */
+.calendarMiniTd .fc-more-cell a {
+    display: block;
+    width: 85%;
+    margin: 1px auto 0 auto;
+    border-radius: 3px;
+    background: grey;
+    color: transparent;
+    overflow: hidden;
+    height: 4px;
+}
+.calendarMiniTd .fc-more-popover {
+    width: 100px;
+}
+.calendarMiniTd .fc-view-month .fc-event, .calendarMiniTd .fc-view-agendaWeek .fc-event, .calendarMiniTd .fc-content {
+    font-size: 0;
+    overflow: hidden;
+    height: 2px;
+}
+.calendarMiniTd .fc-view-agendaWeek .fc-event-vert {
+    font-size: 0;
+    overflow: hidden;
+    width: 2px !important;
+}
+.calendarMiniTd .fc-agenda-axis {
+    width: 20px !important;
+    font-size: .7em;
+}
+
+.calendarMiniTd .fc-button-content {
+    padding: 0;
+} 
+
+.calendarMiniTd #calendarSpace{
+	width: 160px;
+    height: 200px;
+	background-color: #FFFFFF00;
+}
+.tb_calendar_minMax{
+	width: 70px;
+	background-color: #FFFFFF00;
+	border: none;
+	border-bottom: #274554 solid 2px;
+	outline: none;
+}
+.tb_calendar_titleContent{
+	width: 150px; 
+	background-color: #FFFFFF00;
+	border: none;
+	border-bottom: #274554 solid 2px;
+	outline: none;
+}
+#tb_calendar_category{
+	width: 70px;
+	background-color: #FFFFFF00;
+	border: none;
+	border-bottom: #274554 solid 2px;
+	outline: none;	
+}
+
+#deleteCalendarGo{
+	width: 80px;
+	outline: none;
+	border: #FAC03B solid 2px;
+	background-color: #FFFFFF00;
+	color: #274554;
+	font-weight: 700;
+	margin-top: 5px;
+}
